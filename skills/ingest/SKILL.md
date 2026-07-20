@@ -1,6 +1,6 @@
 ---
 name: ingest
-description: Read new raw sources in the knowledge/ half of the vault and synthesize them into the LLM-maintained wiki. Use when the user says "ingest", "read new sources", "process new sources", "update the wikis", or otherwise asks to fold freshly-added clippings, notes, books, or articles into wikis/. Scans raw files with status:new, writes/updates atomic wiki pages, maintains cross-links, refreshes index.md and log.md, and flips processed sources to status:processed.
+description: Read new raw sources in the knowledge/ half of the vault and synthesize them into the LLM-maintained wiki. Use when the user says "ingest", "read new sources", "process new sources", "update the wikis", or otherwise asks to fold freshly-added clippings, notes, books, or articles into wikis/. Scans raw files with status:new, writes/updates atomic wiki pages, maintains cross-links, refreshes the catalog and log (index.md and log.md, both in wikis/primary/), and flips processed sources to status:processed.
 ---
 
 # Ingest
@@ -70,9 +70,11 @@ For every file you finished synthesizing:
 
 ## Step 4 — Update the meta-files
 
-- **`index.md`** — add any new pages with one-line summaries in the right section (Concepts / People / Source Summaries / Raw Sources). Move newly-processed raw sources into the catalog.
-- **`log.md`** — append an entry headed `## [YYYY-MM-DD] ingest | <short title>` describing scope, pages created/updated, cross-refs, and notable stubs or deferrals.
-- **`log.md` → Interest Evolution table** — re-weight the current calendar period's column to reflect what this batch of sources was about (broad interests, not atomic concepts). If the calendar period has rolled over since the last column, add a new column. Update the **Trajectory** line if the trend shifted.
+> **Location:** both meta-files live in **`knowledge/wikis/primary/`** — `wikis/primary/index.md` and `wikis/primary/log.md` — *not* in `wikis/` root. Edit them in place (updating content in `primary/` is allowed; only *moving* pages in/out of `primary/` is forbidden). If a copy ever appears in `wikis/` root, it's a stray duplicate — merge it into the `primary/` copy and delete the root one.
+
+- **`wikis/primary/index.md`** — add any new pages with one-line summaries in the right section (Concepts / People / Source Summaries / Raw Sources). Move newly-processed raw sources into the catalog.
+- **`wikis/primary/log.md`** — append an entry headed `## [YYYY-MM-DD] ingest | <short title>` describing scope, pages created/updated, cross-refs, and notable stubs or deferrals.
+- **`wikis/primary/log.md` → Interest Evolution table** — re-weight the current calendar period's column to reflect what this batch of sources was about (broad interests, not atomic concepts). If the calendar period has rolled over since the last column, add a new column. Update the **Trajectory** line if the trend shifted.
 
 ## Step 5 — Report
 

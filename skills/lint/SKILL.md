@@ -20,7 +20,7 @@ Walk all of `wikis/` and flag:
 7. **Concepts lacking their own page** — a cross-cutting term explained inline in several pages should be promoted to its own atomic page that the others link to.
 8. **Atomicity violations** — sprawling pages covering several ideas; propose a split.
 9. **Schema drift** — pages missing the standard sections (definition, `## Core idea`, `## Connections`) or the `type/updated/sources` frontmatter. Note: the current schema has **no `## Key sources` section** — sources are cited inline (see check 14).
-10. **Index / log accuracy** — `index.md` entries that no longer match reality (missing pages, wrong summaries, stale Raw-Sources catalog).
+10. **Index / log accuracy** — `wikis/primary/index.md` entries that no longer match reality (missing pages, wrong summaries, stale Raw-Sources catalog). Both meta-files (`index.md`, `log.md`) live in **`wikis/primary/`**, not `wikis/` root; a copy in root is a stray duplicate to flag and merge back.
 11. **Data gaps a web search could fill** — open questions, "[unknown]" notes, or thin sections where a quick search would add real substance. Note them (and optionally fill them, citing the source).
 12. **Duplicate pages across `primary/` and root** — the same page existing in both `wikis/` root and `wikis/primary/` makes Obsidian's bare-link resolution ambiguous. Flag any filename that appears in both; the human's `primary/` copy is canonical, so propose deleting or merging the root duplicate into it (don't move the `primary/` page).
 13. **Unattributed outside-vault content** — substantive claims that read as the model's own knowledge rather than anything a vault source supports, but carry no marker. The convention: world knowledge must be denoted `*(outside vault)*` inline at the claim. Flag unmarked external content so the human can tell their own material from model-supplied content; add the marker where clearly warranted, and propose (don't silently apply) the marker where it's a judgment call.
@@ -28,7 +28,7 @@ Walk all of `wikis/` and flag:
 
 ## How to run
 
-1. Build the page inventory: list `wikis/*.md` **and `wikis/primary/*.md`** (the human's starred folder — health-check those pages too), read `index.md` for the catalog. **Never move pages into or out of `primary/`** — you may fix their content, but placement is the human's call.
+1. Build the page inventory: list `wikis/*.md` **and `wikis/primary/*.md`** (the human's starred folder — health-check those pages too), read `wikis/primary/index.md` for the catalog. **Never move pages into or out of `primary/`** — you may fix their content, but placement is the human's call.
 2. Read pages (batch related ones) and collect issues by the categories above.
 3. **Fix the safe, mechanical things directly**: bare-link normalization, obvious broken links, missing cross-refs, index corrections.
 4. **Propose, don't unilaterally rewrite, the judgment calls**: contradictions, page splits, promotions, large content changes — present these to the human with a recommendation.
@@ -37,5 +37,5 @@ Walk all of `wikis/` and flag:
 ## Close out
 
 - Apply the agreed fixes.
-- Append a `log.md` entry headed `## [YYYY-MM-DD] lint | <scope>`: pages scanned, issues found by category, what was auto-fixed, what's pending human decision, and suggested follow-ups.
+- Append a `wikis/primary/log.md` entry headed `## [YYYY-MM-DD] lint | <scope>`: pages scanned, issues found by category, what was auto-fixed, what's pending human decision, and suggested follow-ups.
 - Report a concise summary to the human, leading with anything that needs their call.
