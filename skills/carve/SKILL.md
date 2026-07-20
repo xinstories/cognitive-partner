@@ -49,9 +49,11 @@ For any `status: new` raw file you actually drew from, set it to `status: proces
 
 ## Step 5 — Update the meta-files
 
-- **`index.md`** — add the new page (or update its summary) in the right section.
-- **`log.md`** — append `## [YYYY-MM-DD] carve | <topic>`: what was created/expanded, which sources fed it, links added, and the migrations you proposed.
-- **`log.md` → Interest Evolution table** — if the carved topic reflects a live interest, nudge the current period's weighting (same as ingest).
+> **Location:** both meta-files live in **`knowledge/wikis/primary/`** (`wikis/primary/index.md`, `wikis/primary/log.md`) — *not* `wikis/` root. Update them in place; updating content in `primary/` is allowed, only *moving* pages in/out of it is forbidden.
+
+- **`wikis/primary/index.md`** — add the new page (or update its summary) in the right section.
+- **`wikis/primary/log.md`** — append `## [YYYY-MM-DD] carve | <topic>`: what was created/expanded, which sources fed it, links added, and the migrations you proposed.
+- **`wikis/primary/log.md` → Interest Evolution table** — if the carved topic reflects a live interest, nudge the current period's weighting (same as ingest).
 
 ## Step 6 — Backlog check
 

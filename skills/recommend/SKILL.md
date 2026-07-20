@@ -11,8 +11,8 @@ Read `CLAUDE.md` first for the vault schema.
 
 ## Step 1 — Read the interest signal
 
-1. Read `knowledge/wikis/index.md` for the catalog of concepts/people/sources.
-2. Read `knowledge/wikis/log.md` → the **Interest Evolution** table to see what's *currently* hot vs. fading. Weight recommendations toward the live edge of their interests, not just the all-time set.
+1. Read `knowledge/wikis/primary/index.md` for the catalog of concepts/people/sources.
+2. Read `knowledge/wikis/primary/log.md` → the **Interest Evolution** table to see what's *currently* hot vs. fading. Weight recommendations toward the live edge of their interests, not just the all-time set.
 3. **Rank the wikis by maturity & recency.** Prefer pages that are either recently updated or well-developed — these are where the human's attention actually is and where a recommendation lands best. Judge by:
    - the page's `updated:` frontmatter (recent = live interest),
    - its `sources:` count and link density (high = a mature, serious interest worth feeding),
